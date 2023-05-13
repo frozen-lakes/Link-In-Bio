@@ -2,24 +2,26 @@
 @import './Components/responsive';
 
 
-html,body{
+body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     height: 100vh;
     display: grid;
     place-items: center;
+    background-image: url('/assets/bg-sm.jpg');
+    background: cover;
+
+    @include responsive($lg){
+        background-image: url('/assets/BG-lg.jpg');
+    }
 
     main{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 15em;
-
-        @include responsive($md) {
-            flex-direction: row;
-        }
+        gap: 7em;
         
         nav{
             display: flex;
@@ -33,22 +35,39 @@ html,body{
             display: flex;
             flex-direction: column;
             align-items: start;
-            gap: 3em;
-            article{
+            gap: 3px;
+            a{
+                color: black;
+                text-decoration: none;
                 display: flex;
-                gap: 7em;
+                gap: 2px;
+                border-radius: 5px;
+                background-color: $primary;
+
+                &:first-child{
+                    border-radius: 10px 10px 5px 5px;
+                }
+                &:last-child{
+                    border-radius: 5px 5px 10px 10px;
+                }
                 div{
+                    // background-color: blue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    width: 18em;
+                    @include responsive-max(280px){
+                        width: 13em;
+                    }
+                    
                     &:nth-child(1){
+                        width: 3em;
                         img{
-                            max-width: 4em;
-                            max-height: 3em;
+                            max-width: 3em;
+                            max-height: 2em;
                         }
                     }
                 }
-                
             }
         }
     }

@@ -1,7 +1,9 @@
 document.querySelector("body").innerHTML = `
 <main>
     <nav>
-        <img draggable="false" src="./assets/logo.png" alt="Logo">
+        <div>
+          <img draggable="false" src="./assets/logo.png" alt="Logo">
+        </div>
         <h2>Frozen Lakes</h2>
     </nav>
     <section>
@@ -19,14 +21,14 @@ fetch("./data/links.json")
     let out = "";
     for (let link of links) {
       out += `
-        <article>
+        <a href="">
           <div>
             <img src="${link.icon}" draggable="false" alt="Logo">
           </div>
           <div>
             <h3>${link.name}</h3>
           </div>
-        </article>
+        </a>
         `;
     }
     placeholder.innerHTML = out;
