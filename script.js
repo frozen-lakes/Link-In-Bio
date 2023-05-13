@@ -19,10 +19,14 @@ fetch("./data/links.json")
     let out = "";
     for (let link of links) {
       out += `
-        <div>
-          <img src="${link.icon}" draggable="false" alt="Logo">
-          <h3>${link.name}</h3>
-        </div>
+        <article>
+          <div>
+            <img src="${link.icon}" draggable="false" alt="Logo">
+          </div>
+          <div>
+            <h3>${link.name}</h3>
+          </div>
+        </article>
         `;
     }
     placeholder.innerHTML = out;
