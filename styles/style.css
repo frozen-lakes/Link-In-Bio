@@ -1,0 +1,38 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+html main, body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+}
+html main nav, body main nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html main nav img, body main nav img {
+  max-width: 10em;
+}
+html main section, body main section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3em;
+}
+html main section div, body main section div {
+  display: flex;
+  gap: 7em;
+  justify-content: center;
+}
+html main section div img, body main section div img {
+  max-width: 4em;
+  max-height: 3em;
+}/*# sourceMappingURL=style.css.map */

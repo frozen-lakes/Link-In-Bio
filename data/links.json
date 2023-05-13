@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "./assets/insta.png",
+        "name": "Instagram"
+    }   ,
+    {
+        "icon": "./assets/git.png",
+        "name": "Github"
+    } ,
+    {
+        "icon": "./assets/yt.png",
+        "name": "Youtube"
+    } 
+
+]
+
+
