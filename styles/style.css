@@ -6,7 +6,6 @@ body {
   display: grid;
   place-items: center;
   background-image: url("/assets/bg-sm.jpg");
-  background: cover;
 }
 @media (min-width: 1024px) {
   body {
@@ -35,12 +34,15 @@ body main section {
   gap: 3px;
 }
 body main section a {
+  transform: translatey(100px);
   color: black;
   text-decoration: none;
   display: flex;
   gap: 2px;
   border-radius: 5px;
-  background-color: rgb(126, 192, 238);
+  background-color: rgba(126, 192, 238, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 body main section a:first-child {
   border-radius: 10px 10px 5px 5px;
@@ -65,4 +67,27 @@ body main section a div:nth-child(1) {
 body main section a div:nth-child(1) img {
   max-width: 3em;
   max-height: 2em;
+}
+body main section a ::before {
+  content: "";
+  opacity: 1;
+}
+body main section a::after {
+  content: "";
+  opacity: 0;
+}
+
+section a:nth-child(1) {
+  transition: transform 0.9s;
+  transition-delay: 0.2s;
+}
+
+section a:nth-child(2) {
+  transition: transform 0.9s;
+  transition-delay: 0.3s;
+}
+
+section a:nth-child(3) {
+  transition: transform 0.9s;
+  transition-delay: 0.4s;
 }/*# sourceMappingURL=style.css.map */
