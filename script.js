@@ -1,10 +1,12 @@
 document.querySelector("body").innerHTML = `
 <main>
     <nav>
-        <div>
-          <img draggable="false" src="./assets/logo.png" alt="Logo">
-        </div>
+      <div>
+        <img draggable="false" src="./assets/logo.png" alt="Logo">
+      </div>
+      <div>
         <h2>Frozen Lakes</h2>
+      </div>
     </nav>
     <section>
 

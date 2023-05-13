@@ -28,9 +28,14 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
+            transform: translatey(-100px);
+            opacity: 0;
             img{
                 max-width: 10em;
+                rotate: 0deg;
+                animation: logo infinite 30s ease;
             }
+            animation: nav-slide 1s forwards;
         }
         section{
             display: flex;
@@ -38,8 +43,6 @@ body{
             align-items: start;
             gap: 3px;
             a{
-                // opacity: 0;
-                transform: translatey(100px);
                 color: black;
                 text-decoration: none;
                 display: flex;
@@ -47,6 +50,9 @@ body{
                 border-radius: 5px;
                 background-color: $primary;
                 backdrop-filter: blur(2px);
+                transform: translatey(100px);
+                opacity: 0;
+                animation: item-slide 1s forwards;
 
                 &:first-child{
                     border-radius: 10px 10px 5px 5px;
@@ -71,23 +77,52 @@ body{
                         }
                     }
                 }
-                ::before{
-                    content: '';
-                    opacity: 1;
-                }
-                &::after{
-                    content: '';
-                    opacity: 0;
-                }
             }
+            
         }
     }
 }
 
+@keyframes logo {
+    0% {
 
-@for $i from 1 through 3{
-    section a:nth-child(#{$i}) {
-        transition: transform .9s;
-        transition-delay: ($i * .1s) + .10s;
+    }
+    100%{
+        rotate: 360deg;
     }
 }
+
+
+@keyframes nav-slide {
+    0%{
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes item-slide {
+    0%{
+
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@for $i from 1 through 4 {
+    $delay: ($i - 1) *0.2;
+    a:nth-child(#{$i}) {
+        animation-delay: #{$delay}s;
+    }
+}
+
+
+
+
